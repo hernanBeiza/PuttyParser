@@ -14,7 +14,7 @@ def main(argv):
   leerExcel(archivoXLXS, salidaCSV)
 
 def leerExcel(archivoXLXS, salidaCSV):
-  print("Leyendo exxcel" + archivoXLXS)
+  print("Leyendo excel" + archivoXLXS)
   workbook = xlrd.open_workbook(archivoXLXS)
   for hoja in workbook.sheets():
     print ('Hoja:',hoja.name)
@@ -79,6 +79,7 @@ def leerExcel(archivoXLXS, salidaCSV):
         datosMulti.append(datosPorHora)
 
     print('Datos:', datos)
+    print('datosMulti:', datosMulti)
 
 
     print ('Salida')
@@ -109,6 +110,6 @@ if __name__ == '__main__':
     print(argv);
     #argv por defecto
     #argv = ['script', '1', '2', '3']
-    print("Falta especificar ruta de archivo.xlsx");
+    print("Falta especificar ruta de archivo.xlsx y el archivo de salida .csv");
   else:
     main(argv)
